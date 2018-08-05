@@ -1,5 +1,6 @@
-# go
-Go programming language, also known as 'golang'.
+# Go 102 - Advanced Go
+
+Placeholder
 
 ```
    Copyright 2018 Opensource Academy

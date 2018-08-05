@@ -1,5 +1,9 @@
-# go
-Go programming language, also known as 'golang'.
+# Go 101 - Introduction to Go
+
+## Get started with go
+https://golang.org/
+
+Placeholder
 
 ```
    Copyright 2018 Opensource Academy
