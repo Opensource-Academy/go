@@ -48,7 +48,7 @@ Why do we work with Go?
 
 * Cross-compilation. It's fairly easy to compile a Go program for other architectures and operating systems. The most used architectures and operating systems are supported.
 * Syntax is clean and simple. No need for unnescesary bracket or parenthesis.
-* Intergrated support for C libraries.
+* Integrated support for C libraries.
 * Golang is not object oriented by definition but has different ways for inheritance.  
 * Go also has object oriented-like features but uses them in a slighty different way. Go has no classes nor inheritence but uses alternative mechanisms to define relationships. Read [this](http://spf13.com/post/is-go-object-oriented/) blogpost to get a better understanding. 
   
