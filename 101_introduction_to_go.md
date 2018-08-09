@@ -32,7 +32,7 @@ Watch this [video](https://www.youtube.com/watch?v=5bYO60-qYOI&feature=youtu.be&
 
 ## Where is Go in the landscape of programming languages.
 Go is somwhere between the compiled languages as C and C++ and the interpreted languages as Java and Python.
-![Go1](file:///Users/ivodev/go/src/summerschool/go01.png)
+![Go1](go01.png)
 
 ## The advantages of Go
 
@@ -80,7 +80,7 @@ etc...
 
 ## Concurrency
 The part where Go really excels is _concurrency_. In Go, starting multiple processes at the same time is easy and without clutter.  
-![Go2](file:///Users/ivodev/go/src/summerschool/go02.png)  
+![Go2](go02.png)  
 
 ## Tips on learning Go
 * Use multiple sources/tutorials while learning Go.
