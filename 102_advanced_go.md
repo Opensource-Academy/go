@@ -50,9 +50,9 @@ Make you set the GOPATH correctly according to your OS.
 To unlock the full potential of Spacemacs and Golang, follow these steps:
 1. Add these lines to your .bash_profile or .bashrc depending on OS:
 ```bash  
-export GOPATH=$HOME/go # or the path you want Go to live in.
-export PATH=$PATH:$GOPATH/bin
-export GOBIN=$HOME/go/bin
+GOPATH=$HOME/go # or the path you want Go to live in.
+PATH=$PATH:$GOPATH/bin
+GOBIN=$HOME/go/bin
 ```  
 
 2. Make sure your GOPATH has these three folders:
@@ -101,7 +101,8 @@ So the code looks like this:
     )
 ```  
 
-5. Now open Spacemacs and create a .go file byt typing `SPC f f` and typing in your filename plus .go extension.
+5. In order to reload Spacemacs, press `SPC f e D`  
+6. Now open Spacemacs and create a .go file byt typing `SPC f f` and typing in your filename plus .go extension.
 Spacemacs will now import the go layer and is able to use all the installed packages.   
 To get a grasp of how these functions work, you an read this [document](https://docs.google.com/document/d/1_Y9xCEMj5S-7rv2ooHpZNH15JgRT5iM742gJkw5LtmQ/edit) and watch this [video](https://www.youtube.com/watch?v=ak97oH0D6fI)
 
