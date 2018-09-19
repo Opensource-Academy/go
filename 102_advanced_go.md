@@ -17,6 +17,7 @@
         - [Nice excercises](#nice-excercises)
         - [Use the power](#use-the-power)
         - [Testing](#testing)
+        - [Reference](#reference)
     - [Must read stuff](#must-read-stuff)
     - [Protocols](#protocols)
         - [HTTP](#http)
@@ -50,9 +51,9 @@ Make you set the GOPATH correctly according to your OS.
 To unlock the full potential of Spacemacs and Golang, follow these steps:
 1. Add these lines to your .bash_profile or .bashrc depending on OS:
 ```bash  
-GOPATH=$HOME/go # or the path you want Go to live in.
-PATH=$PATH:$GOPATH/bin
-GOBIN=$HOME/go/bin
+export GOPATH=$HOME/go # or the path you want Go to live in.
+export PATH=$PATH:$GOPATH/bin
+export GOBIN=$HOME/go/bin
 ```  
 
 2. Make sure your GOPATH has these three folders:
@@ -101,7 +102,7 @@ So the code looks like this:
     )
 ```  
 
-5. In order to reload Spacemacs, press `SPC f e D`  
+5. In order to reload Spacemacs, press `SPC f e R`  
 6. Now open Spacemacs and create a .go file byt typing `SPC f f` and typing in your filename plus .go extension.
 Spacemacs will now import the go layer and is able to use all the installed packages.   
 To get a grasp of how these functions work, you an read this [document](https://docs.google.com/document/d/1_Y9xCEMj5S-7rv2ooHpZNH15JgRT5iM742gJkw5LtmQ/edit) and watch this [video](https://www.youtube.com/watch?v=ak97oH0D6fI)
@@ -137,7 +138,7 @@ You can use interfaces in a few different ways to really boost your code. Read t
 * Goroutines and channels  
 Concurrency in Go is powerful when knowing how to use it.
 This is a great [video](https://youtu.be/f6kdp27TYZs) where Rob Pike explains Go channels, goroutines and patterns with example code.  
-Divan has made concurrency [visual](http://divan.github.io/posts/go_concurrency_visualize/) for you and explains this in a [video](https://www.youtube.com/watch?v=KyuFeiG3Y60).
+Divan has made concurrency [visual](http://divan.github.io/posts/go_concurrency_visualize/) for you and explains this in a [video](https://www.youtube.com/watch?v=KyuFeiG3Y60).  
 Tutorial about concurrency and [wait-groups](https://medium.com/@matryer/very-basic-concurrency-for-beginners-in-go-663e63c6ba07)
 * Packages
 You don't have to re-invent the wheel. Go has core packages that so you don't have to build everything from scratch. Learning how to use them will make your life a lot easier:  
@@ -151,6 +152,10 @@ You don't have to re-invent the wheel. Go has core packages that so you don't ha
 ### Testing
 Go has a testing [package](https://golang.org/pkg/testing/) package.   
 Video on [testing](https://www.youtube.com/watch?v=ndmB0bj7eyw) in Go.  
+
+### Reference
+The complete [Go Programming Language Specification](https://golang.org/ref/spec)  
+Tutorial on [for loops](http://golangtutorials.blogspot.com/2011/06/control-structures-go-for-loop-break.html)
 
 
 ## Must read stuff
