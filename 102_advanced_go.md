@@ -163,6 +163,7 @@ Tutorial on [for loops](http://golangtutorials.blogspot.com/2011/06/control-stru
 * Blogpost about [strings](https://blog.golang.org/strings) in Go.
 * Strings to bytes and [why](https://medium.com/go-walkthrough/go-walkthrough-bytes-strings-packages-499be9f4b5bd)
 * Great explanation on how Go appends to slices for you and what happens [internally](https://blog.golang.org/go-slices-usage-and-internals)
+* Getting a grasp on [pointers](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back)
 
 ## Protocols  
 Learn about all the different protocols you'll probably going to work with.
