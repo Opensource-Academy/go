@@ -15,6 +15,7 @@
         - [Tips when learning to code](#tips-when-learning-to-code)
         - [Additional resources](#additional-resources)
         - [Nice excercises](#nice-excercises)
+        - [Interesting Go talks](#interesting-go-talks)
         - [Use the power](#use-the-power)
         - [Testing](#testing)
     - [Must read stuff](#must-read-stuff)
@@ -51,8 +52,8 @@ To unlock the full potential of Spacemacs and Golang, follow these steps:
 1. Add these lines to your .bash_profile or .bashrc depending on OS:
 ```bash  
 export GOPATH=$HOME/go # or the path you want Go to live in.
-export PATH=$PATH:$GOPATH/bin
-export GOBIN=$HOME/go/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 ```  
 
 2. Make sure your GOPATH has these three folders:
@@ -114,11 +115,6 @@ To get a grasp of how these functions work, you an read this [document](https://
 * Caleb Doxsey wrote this introduction for Go both on the [web](https://www.golang-book.com/books/intro) as a [PDF](https://www.golang-book.com/public/pdf/gobook.0.pdf)
 * Alan Donovan and Brian Kernighan wrote [The Go Programming Language](http://www.gopl.io/). 
 
-### Tips when learning to code
-Every resource above might not contain all the information you need on their own, especially for newcomers to programming.
-I recommend you consulting multiple resources on one subject. All resources have more or less the same structure which makes it easy to combine them at the same time. And off course you are free to use other resources that you find useful or more suiting to your type of studying.
-Also, try typing all the code yourself when learning to code and make variations or combine different techiques to really understand the principles of programming in Go.
-
 ### Additional resources
 * Information for all the packages in Go from the official [website](https://golang.org/pkg/)
 * Dave Cheney has a nice [page](https://dave.cheney.net/resources-for-new-go-programmers) with valuable resources for Go.
@@ -128,6 +124,13 @@ Also, try typing all the code yourself when learning to code and make variations
 ### Nice excercises  
 Test your skills and see if you can crack these [excersises](https://exercism.io/tracks/go/exercises).  
 See also the various answers by other users.   
+
+### Interesting Go talks
+* [Google I/O 2012 - Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
+  A basic (and quick) introduction (with examples) for concurrent programming in Go. Very usefull for getting a quick overview of concurrent go programming.
+* [Google I/O 2013 - Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)
+  As the title describes, this talks goes more in depth about concurrent programming in Go. This too is a video that show a very quich but detailed overview.
+* [Effectivity of Go](https://www.youtube.com/watch?v=cQ7STILAS0M) explained by one of the creators
 
 ### Use the power
 Go has a few features that and packages that make Go so powerful and easy to use. It's worth paying extra attention to the items in the list below.   
