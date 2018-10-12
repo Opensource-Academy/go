@@ -1,3 +1,4 @@
+
 # Golang programming course
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -106,6 +107,50 @@ So the code looks like this:
 6. Now open Spacemacs and create a .go file byt typing `SPC f f` and typing in your filename plus .go extension.
 Spacemacs will now import the go layer and is able to use all the installed packages.   
 To get a grasp of how these functions work, you an read this [document](https://docs.google.com/document/d/1_Y9xCEMj5S-7rv2ooHpZNH15JgRT5iM742gJkw5LtmQ/edit) and watch this [video](https://www.youtube.com/watch?v=ak97oH0D6fI)
+
+**Update october 2018**  
+Some guidelines to install Spacemacs on Linux.  
+Install Emacs:  
+`apt install emacs` (sudo when needed or other package manager for your system.)  
+Check if Emacs is 24.4 or above:  
+`emacs --version`  
+If Emacs is below 24.4:  
+`apt install emacs25`  
+Read the Spacemacs install instructions [here](https://github.com/syl20bnr/spacemacs).  
+In short:  
+* Clone the repository in the right location: `git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d`
+* Launch Emacs: `emacs` or when elpa needs an insecure http connection: `emacs --insecure`  
+Spacemacs will be automaticly installed. Restart Emacs to complete the installation.  
+When creating a .go file, Spacemacs will ask to install the Go-layer. Press yes.  
+
+**Make sure you set your paths right otherwise these plugins below won't work!**    
+Put this in your .profile / .bash_profile file:  
+```
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin:/home/<user>/go/bin
+```
+> Somehow Linux doesn't always like environmental vars ($GOPATH and$GOROOT) as part of the PATH declaration so use absolute paths.  
+
+To unlock some awesome tools in Go, read [this](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/go) website.  
+In short:
+```
+go get -u -v github.com/nsf/gocode
+go get -u -v github.com/rogpeppe/godef
+go get -u -v golang.org/x/tools/cmd/guru
+go get -u -v golang.org/x/tools/cmd/gorename
+go get -u -v golang.org/x/tools/cmd/goimports
+```
+If you want to use gometalinter:  
+```
+go get -u -v github.com/alecthomas/gometalinter
+gometalinter --install --update
+```
+Only thing left is to activate some layers.  
+Open the .spacemacs file in the .emacs.d folder or press `SPC f e d` in Emacs.  
+Look for `dotspacemacs-configuration-layers` and un-comment `auto-completion` and `syntax-chacking`.  
+You're probably set up now. Reboot your machine to make sure everything is loaded property.  
 
 ## Learning go
 ### These are some useful introductions to Go:
