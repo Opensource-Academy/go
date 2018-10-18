@@ -1,3 +1,4 @@
+
 # Golang programming course
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -18,6 +19,7 @@
         - [Interesting Go talks](#interesting-go-talks)
         - [Use the power](#use-the-power)
         - [Testing](#testing)
+        - [Reference](#reference)
     - [Must read stuff](#must-read-stuff)
     - [Protocols](#protocols)
         - [HTTP](#http)
@@ -102,9 +104,54 @@ So the code looks like this:
     )
 ```  
 
-5. Now open Spacemacs and create a .go file byt typing `SPC f f` and typing in your filename plus .go extension.
+5. In order to reload Spacemacs, press `SPC f e R`  
+6. Now open Spacemacs and create a .go file byt typing `SPC f f` and typing in your filename plus .go extension.
 Spacemacs will now import the go layer and is able to use all the installed packages.   
 To get a grasp of how these functions work, you an read this [document](https://docs.google.com/document/d/1_Y9xCEMj5S-7rv2ooHpZNH15JgRT5iM742gJkw5LtmQ/edit) and watch this [video](https://www.youtube.com/watch?v=ak97oH0D6fI)
+
+**Update october 2018**  
+Some guidelines to install Spacemacs on Linux.  
+Install Emacs:  
+`apt install emacs` (sudo when needed or other package manager for your system.)  
+Check if Emacs is 24.4 or above:  
+`emacs --version`  
+If Emacs is below 24.4:  
+`apt install emacs25`  
+Read the Spacemacs install instructions [here](https://github.com/syl20bnr/spacemacs).  
+In short:  
+* Clone the repository in the right location: `git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d`
+* Launch Emacs: `emacs` or when elpa needs an insecure http connection: `emacs --insecure`  
+Spacemacs will be automaticly installed. Restart Emacs to complete the installation.  
+When creating a .go file, Spacemacs will ask to install the Go-layer. Press yes.  
+
+**Make sure you set your paths right otherwise these plugins below won't work!**    
+Put this in your .profile / .bash_profile file:  
+```
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin:/home/<user>/go/bin
+```
+> Somehow Linux doesn't always like environmental vars ($GOPATH and$GOROOT) as part of the PATH declaration so use absolute paths.  
+
+To unlock some awesome tools in Go, read [this](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/go) website.  
+In short:
+```
+go get -u -v github.com/nsf/gocode
+go get -u -v github.com/rogpeppe/godef
+go get -u -v golang.org/x/tools/cmd/guru
+go get -u -v golang.org/x/tools/cmd/gorename
+go get -u -v golang.org/x/tools/cmd/goimports
+```
+If you want to use gometalinter:  
+```
+go get -u -v github.com/alecthomas/gometalinter
+gometalinter --install --update
+```
+Only thing left is to activate some layers.  
+Open the .spacemacs file in the .emacs.d folder or press `SPC f e d` in Emacs.  
+Look for `dotspacemacs-configuration-layers` and un-comment `auto-completion` and `syntax-chacking`.  
+You're probably set up now. Reboot your machine to make sure everything is loaded property.  
 
 ## Learning go
 ### These are some useful introductions to Go:
@@ -139,7 +186,7 @@ You can use interfaces in a few different ways to really boost your code. Read t
 * Goroutines and channels  
 Concurrency in Go is powerful when knowing how to use it.
 This is a great [video](https://youtu.be/f6kdp27TYZs) where Rob Pike explains Go channels, goroutines and patterns with example code.  
-Divan has made concurrency [visual](http://divan.github.io/posts/go_concurrency_visualize/) for you and explains this in a [video](https://www.youtube.com/watch?v=KyuFeiG3Y60).
+Divan has made concurrency [visual](http://divan.github.io/posts/go_concurrency_visualize/) for you and explains this in a [video](https://www.youtube.com/watch?v=KyuFeiG3Y60).  
 Tutorial about concurrency and [wait-groups](https://medium.com/@matryer/very-basic-concurrency-for-beginners-in-go-663e63c6ba07)
 * Packages
 You don't have to re-invent the wheel. Go has core packages that so you don't have to build everything from scratch. Learning how to use them will make your life a lot easier:  
@@ -154,12 +201,17 @@ You don't have to re-invent the wheel. Go has core packages that so you don't ha
 Go has a testing [package](https://golang.org/pkg/testing/) package.   
 Video on [testing](https://www.youtube.com/watch?v=ndmB0bj7eyw) in Go.  
 
+### Reference
+The complete [Go Programming Language Specification](https://golang.org/ref/spec)  
+Tutorial on [for loops](http://golangtutorials.blogspot.com/2011/06/control-structures-go-for-loop-break.html)
+
 
 ## Must read stuff
 * A string is not a [string](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 * Blogpost about [strings](https://blog.golang.org/strings) in Go.
 * Strings to bytes and [why](https://medium.com/go-walkthrough/go-walkthrough-bytes-strings-packages-499be9f4b5bd)
 * Great explanation on how Go appends to slices for you and what happens [internally](https://blog.golang.org/go-slices-usage-and-internals)
+* Getting a grasp on [pointers](https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back)
 
 ## Protocols  
 Learn about all the different protocols you'll probably going to work with.
