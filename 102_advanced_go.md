@@ -153,6 +153,9 @@ Open the .spacemacs file in the .emacs.d folder or press `SPC f e d` in Emacs.
 Look for `dotspacemacs-configuration-layers` and un-comment `auto-completion` and `syntax-chacking`.  
 You're probably set up now. Reboot your machine to make sure everything is loaded property.  
 
+If the autocompletion isn't working, you need to enable auto-complete-mode. 
+Open the .spacemacs file `SPC SPC`, enable auto-complete-mode and restart spacemacs.
+
 ## Learning go
 ### These are some useful introductions to Go:
 * A Tour of [Go](https://tour.golang.org/) by Google.  
